@@ -19,6 +19,9 @@ public class StageManager : MonoBehaviour
     [SerializeField] private ResultPanelUI resultPanel;
     [SerializeField] private GameObject enemyHudPrefab;
     [SerializeField] private Transform enemyHudContainer;
+    [SerializeField] private GameObject damageTextPrefab;
+    [SerializeField] private Vector3 offset = new(0, 2.2f, 0);
+    [SerializeField] private Transform damageTextContainer;
 
     private BattleEntity playerEntity;
     private readonly List<BattleEntity> aliveEnemies = new();
@@ -80,7 +83,7 @@ public class StageManager : MonoBehaviour
             hud.GetComponentInChildren<BuffPanelUI>();
         buffUI.Bind(playerEntity);
 
-
+        playerEntity.OnDamaged += OnDamaged;
         // 监听玩家死亡
         playerEntity.OnDeath += OnPlayerDead;
     }
@@ -144,7 +147,23 @@ public class StageManager : MonoBehaviour
             hud.GetComponentInChildren<BuffPanelUI>();
         buffUI.Bind(enemyEntity);
 
+
+
+        enemyEntity.OnDamaged += OnDamaged;
         enemyEntity.OnDeath += OnEnemyDead;
+    }
+
+    void OnDamaged(int damage, bool isCritical, EntityView target)
+    {
+        DamageTextUI text =
+        Instantiate(damageTextPrefab, damageTextContainer.transform).GetComponent<DamageTextUI>();
+
+        Vector3 screenPos =
+            Camera.main.WorldToScreenPoint(target.transform.position + offset);
+
+        transform.position = screenPos;
+        text.transform.position = screenPos;
+        text.Init(damage, isCritical);
     }
 
     void OnEnemyDead(BattleEntity enemy)

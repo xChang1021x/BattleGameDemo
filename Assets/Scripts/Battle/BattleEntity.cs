@@ -26,7 +26,7 @@ public class BattleEntity
     public BuffController Buffs { get; private set; }
 
     public event Action<int, int> OnHPChanged; // current, max
-    public event Action<int, bool> OnDamaged; // damage, crit
+    public event Action<int, bool, EntityView> OnDamaged; // damage, crit
     public event Action<BattleEntity> OnDeath;
 
     public bool IsDead => HP <= 0;
@@ -62,7 +62,7 @@ public class BattleEntity
         }
 
         OnHPChanged?.Invoke(HP, MaxHP.FinalValue);
-        OnDamaged?.Invoke(damage, isCrit);
+        OnDamaged?.Invoke(damage, isCrit, View);
     }
 
     public void Die()

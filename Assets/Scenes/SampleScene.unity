@@ -452,6 +452,7 @@ RectTransform:
   - {fileID: 719668838}
   - {fileID: 1859743902}
   - {fileID: 1160056140}
+  - {fileID: 1576993310}
   m_Father: {fileID: 1216767422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1238,6 +1239,9 @@ MonoBehaviour:
   resultPanel: {fileID: 1859743905}
   enemyHudPrefab: {fileID: 2801079087777245059, guid: b15749f06b9240f4dbb8686642fe37e2, type: 3}
   enemyHudContainer: {fileID: 277821108}
+  damageTextPrefab: {fileID: 6982639498987393136, guid: 751941e402af4e446b805697e71fb23f, type: 3}
+  offset: {x: 0.5, y: 0.5, z: 0}
+  damageTextContainer: {fileID: 1576993310}
 --- !u!1 &1044814885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1988,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1724627753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1576993309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1576993310}
+  m_Layer: 5
+  m_Name: DamageTextContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1576993310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576993309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 194484235}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1724627752
 GameObject:
   m_ObjectHideFlags: 0
