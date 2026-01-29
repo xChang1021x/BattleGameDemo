@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "id": 1001,
+      "Name": "Normal Attack",
+      "SkillType": "NormalAttack",
+      "Cooldown": 1.0,
+      "DamageRate": 1.0,
+      "CastRange": 5.0,
+      "IconPath": "Icons/normal_attack"
+    },
+    {
+      "id": 1002,
+      "Name": "Poison Strike",
+      "SkillType": "PoisonStrike",
+      "Cooldown": 3.0,
+      "BuffId": 2001,
+      "DamageRate": 1.2,
+      "CastRange": 20.0,
+      "IconPath": "Icons/poison_strike"
+    }    
+  ]
+
+}

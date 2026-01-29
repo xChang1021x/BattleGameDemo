@@ -1,0 +1,29 @@
+{
+  "list": [
+    {
+      "id": 2001,
+      "Name": "Poison",
+      "Type": "Poison",
+      "Duration": 5,
+      "Dps": 5,
+      "IconPath": "Icons/buff_poison"
+    },
+    {
+      "id": 2002,
+      "Name": "Attack Up",
+      "Type": "AttackUp",
+      "Duration": 5,
+      "Value": 20,
+      "IconPath": "Icons/buff_attack_up"
+    },
+    {
+      "id": 2003,
+      "Name": "Attack Percentage Up",
+      "Type": "AttackPercent",
+      "Duration": 10,
+      "Value": 10,
+      "IconPath": "Icons/buff_attack_percent_up"
+    }    
+  ]
+
+}

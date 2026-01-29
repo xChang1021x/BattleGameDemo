@@ -1,0 +1,26 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "Hero",
+      "team": "Player",
+      "maxHp": 400,
+      "atk": 20,
+      "def": 10,
+      "critRate": 50,
+      "critDmg": 150,
+      "skills": [1001, 1002]
+    },
+    {
+      "id": 2,
+      "name": "Goblin",
+      "team": "Enemy",
+      "maxHp": 50,
+      "atk": 10,
+      "def": 5,
+      "critRate": 20,
+      "critDmg": 110,
+      "skills": [1001]
+    }
+  ]
+}
